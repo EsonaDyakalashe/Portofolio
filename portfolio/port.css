@@ -1,0 +1,423 @@
+@import url('https://fonts.googlesapis.com/css?family=Montserrat:300,400,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family:'Montserrat',sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: center;
+}
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color:white;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease ;
+    transition-property: background-color, color;
+}
+.cta:hover{
+    color: white;
+    background-color:rgb(102, 97, 102); 
+    transform: scale(1.1);
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(49, 6, 39);
+    position: fixed;   
+}
+nav ul{
+    float:right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+nav a{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding:7px 10px;
+    border-radius: 3px;
+}
+a.active, a:hover{
+    border: 1px solid white;
+    transition: .5s;
+}
+
+
+@media(max-width:1248px){
+    nav label.logo,
+    label.logo span{
+        font-size: 12px;
+       /* padding-left: 60px;*/
+    }
+    nav li{
+        margin: 0 5px;
+        line-height: 70px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 10px;
+    }
+    
+#about .about-container .projects-header h2{
+        font-size: 19px;
+    }
+    #about .about-container .projects-header p{
+        font-size: 14px;
+    }
+    #about .about-container .projects-header .about-img{
+        height: 100%;
+        width: 100%;
+        padding-top:40px;
+        background-position:top center;
+    }
+}
+
+/*@media(max-width:909px){
+}*/
+/*section{
+    #hero{
+   background-image: url(./ej.jfif) ;
+   background-size: cover;
+   background-position:top center;
+   background-repeat: no-repeat;
+   position: relative;
+   z-index: -1;
+}*/
+label.logo{
+    color:white;
+    text-transform: uppercase;
+   font-size: 35px;
+   font-weight: bold;
+   padding: 0 100px;
+   line-height: 80px;
+}
+label.logo span{
+    color:rgb(163, 27, 131);
+}
+p{
+   color: black;
+   font-size: 1.4rem;
+    margin-top:5px;
+    line-height: 2,5rem;
+    font-weight: 300px;
+    letter-spacing: .05rem;
+}
+.section-tittle{
+    font-size: 4rem;
+    font-weight: 300;
+    color:rgb(15, 14, 14);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.section-tittle span{
+    color:rgb(151, 19, 151);
+}
+
+/*Hero Section*/
+#hero{
+    background-image: url(./ej.jfif) ;
+    background-size: cover;
+    background-position:top center;
+    position: relative;
+    z-index: -1;
+}
+#hero::after{
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+z-index: -1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 50px;
+    justify-content: flex-start;
+
+}
+#hero h1{
+    display: block;
+    width:fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 1ss;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+  /*  animation:text_reveal_name .5s ease forwards;*/
+    animation-delay: 3s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:0;
+    background-color: rgb(151, 19, 151);
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+#hero h1:nth-child(1)span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2)span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3)span{
+    animation-delay: 2.5s;
+}
+
+
+/*End Hero Section*/
+/* Skills section*/
+#skills .skills{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 10o0px 0;
+}
+#skills .skills-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#skills .skills-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding:30px;
+    border-radius: 10px;
+  /**  background-image:url(./imag.jfif);**/
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+#skills .skills-item::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, rgba(71, 57, 57, 0.603)  0%, rgba(109, 86, 86, 0.603)  100%);
+    /* opacity: .9; */
+    z-index: -1;
+}
+#skills .skills-bottom .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#skills .skills-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom:10px ;
+    text-transform: uppercase;
+}
+#skills .skills-item p{
+    color: white;
+    text-align: left;
+}
+/*End Skills Section*/
+/*Projects Section*/
+#projects .projects{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#projects .projects-header h1{
+    margin-bottom: 50px;
+}
+#projects .all-projectss{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#project .project-item{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, rgb(87, 8, 61)  0%,rgb(136, 85, 119)  100%);
+    color: white;
+}
+#projects .project-info h1{
+    font-size:4rem;
+    font-weight: 500;
+}
+#projects .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+#projects .project-info p{
+    color:white;
+}
+#project .project-image{
+    background-position:top center;
+    width: 60%;
+    height: 60%;
+    position: relative;
+    z-index: -1;
+}
+/*#projects .project-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+}
+#projects .project-img:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, rgb(83, 24, 63)  0%,white 100%);
+    opacity: .3;
+}
+#projects .project-img img{
+    transition: .3s ease transform;
+}
+#projects .project-item:hover .project-img img{
+    transform: scale(1.1);
+}*/
+/*End Projects Section*/
+/*About Section*/
+.about-container{
+    width: 97%;
+    height: 750px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0,0,0.2);
+    display: flex;
+    margin: 2% auto 20px auto;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index:-1;
+}
+    
+#about .projects-header h2{
+    margin-right: 40px;
+    margin-top: 30px;
+    position: center;
+    font-size: 32px;
+}
+#about .projects-header p{
+    margin-right: 40px;
+    margin-top: 30px;
+    position: center;
+    font-size: 27px;
+}
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+
+#about  .about-img{
+    height: 100%;
+    width: 100%;
+    padding-top:40px;
+    background-position:top center;
+    position: relative;
+    z-index: -1;
+    
+}
+
+/* End About Section */
+/*CONTACT SECTION*/
+
+#contact .container{
+    z-index:-1;
+    margin-top: -10%;
+}
+
+/**END CONTACT SECTION/
+/*End About Section*/
+/*keyframe*/
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal_name{
+100%{
+    color:white;
+    font-weight: 500;
+}
+
+
+}
+/*End keyframes*/

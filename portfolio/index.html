@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initail-scale=1.0,maximum-scale=2.0">
+        <link rel="stylesheet" href="port.css">
+        <link rel="stylesheet" href="contact.php">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>My website</title>
+        <body>
+            <nav>
+                <label class="logo">Portfo<span>lio.</span></label>
+             <ul>
+               <li><a  href="#home">Home</a></li>
+               <li><a href="#about"> About me</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#projects">Recent Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
+            <!-- Hero Section-->
+            <section id="hero">
+                <div class="hero container" id="home">
+                    <div>
+                        <h1>Hello, <span></span></h1>
+                        <h1>My Name is<span></span></h1>
+                        <h1>Esona Dyakalashe<span></span></h1>
+                        <div class="cta">
+                        <a href="CW7 CH1-ESONA DYAKALASHE CV.pdf" download>Download CV</a>  
+                        </div>     
+                </div>
+            </section>
+                <!--End hero Section-->
+                <!--About Section-->
+              <section id="about">
+                <div class="about-container">
+                    <div class="projects-header">
+                        <h1 class="section-tittle"> About <span>Me</span></h1>
+                        <h2>Front End Developer</h2>
+                        <p>I am Esona Dyakalashe a Software Developer. And I am a young and passionate women with coding.
+                            At the moment I am a  intern in YOUNGLINGS and I am doing front-end in the web development.
+                            My interest and love for programming language started in High School (Grade 9), as I am still interested 
+                            in it now. I also have a  1 year working experience as a Digital Assossiate with CapaCiti.
+                            </p>
+                    </div>  
+                   <div class="about-img">
+                    <img src="./about-image.jpg" alt="img">
+                </div>  
+            </div>
+              </section>
+              <!--End About Section-->
+                <!--Skills Section-->
+                <section id="skills">
+                    <div class="skills container">
+                    <div class="skills-top">
+                        <h1 class="section-tittle">Sk<span>i</span>lls</h1> 
+                        
+                        </div>
+                    <div class="skills-bottom">
+                       
+                      <div class="skills-item" >  
+                        <div class="icon"><img src="https://img.icons8.com/clouds/100/000000/home-page.png"/></div>  
+                        
+                        <h2>Html<h2>
+                        <p>I have a html skills in which i use it for making websites</p>
+                      </div> 
+                      <div class="skills-item" >    
+                       <div class="icon"><img src="https://img.icons8.com/clouds/100/000000/home-page.png" /></div>    
+                        
+                        <h2>Css</h2>
+                        <p> I also have Css skills which I use in website styling,changing text formats and channg positions</p>
+                      </div> 
+                      <div class="skills-item"> 
+                       <div class="icon"><img src="https://img.icons8.com/clouds/100/000000/home-page.png" /></div>   
+                        
+                        <h2>PhP</h2>
+                        <p>I normaly use PhP when I am making forms in a website</p>
+                      </div> 
+                    </div>
+                </div>
+                </section>
+              <!--End Skills Section-->
+             <!--Project Section-->
+             <section id="projects">
+                 <div class="projects-container">
+                     <div class="projects-header">
+                         <h1 class="section-tittle">Rece<span>nt Pr</span>ojects</h1>
+                     </div>
+                     <div class="all-projects">
+                         <div class="project-item">
+                             <div class="project-info">
+                              <h1>Project 1</h1>  
+                              <h2>Coding is love</h2>
+                              <p>My project that I made is a Historical Event website for Neslon Mandela<br>And here is the link for the website: https://app.netlify.com/sites/esonadyakalashe-historicalevent</p> 
+                             </div>
+                             <div class="project-img">
+                                 <img src="./cimage.jfif" alt="img">
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </section>
+              <!--End Project Section-->
+              
+              <!--Contact Section-->
+              <section id="contact">
+                <h1 class="section-tittle">Conta<span>ct Me</span></h1>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 bg-light rounded mt-3">
+                            <h4 class="text-center text-dark p-2">Contact Me</h4>
+                            <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" class="p-2">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Enter Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Enter E-mail" required>
+                            </div>
+                            <div class="form-group">
+                               <textarea name="message" class="form-control"  rows="4" placeholder="Write your message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6LecT48bAAAAAPuQqit6TtBO2MUT1E9suD4j9G6d"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" value="Send" class="btn btn-danger btn-block" >
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+              </section>
+              <!--End Contact Section-->
+
+        </body>
+    </head>
+</html>
